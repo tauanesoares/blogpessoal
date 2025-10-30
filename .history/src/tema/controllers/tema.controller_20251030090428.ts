@@ -26,7 +26,7 @@ export class TemaController {
   @Get('/descricao/:descricao')
   @HttpCode(HttpStatus.OK)
   findBydescricao(@Param('descricao') descricao: string): Promise<Tema[]> {
-    return this.temaService.findAllByDescricao(descricao);
+    return this.temaService.findByDescricao(descricao);
   }
 
   @Post()
